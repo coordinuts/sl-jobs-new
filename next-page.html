@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Page</title>
+</head>
+<body>
+    <h1>User Information</h1>
+    <div id="user-info">
+        <p id="username-display"></p>
+        <p id="password-display"></p>
+    </div>
+
+    <script>
+        // Retrieve username and password from localStorage
+        const username = localStorage.getItem('username');
+        const password = localStorage.getItem('password');
+
+        // Display username and password on the page
+        document.getElementById('username-display').textContent = 'Username: ' + username;
+        document.getElementById('password-display').textContent = 'Password: ' + password;
+
+        // Clear localStorage after retrieving data (optional)
+        localStorage.removeItem('username');
+        localStorage.removeItem('password');
+    </script>
+</body>
+</html>
